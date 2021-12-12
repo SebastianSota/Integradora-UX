@@ -1,5 +1,29 @@
 var myApp = angular.module('theForest',[]);
 
+myApp.controller('paymentController', ['$scope', function($scope){
+
+  $scope.data = {
+    person: {
+      name: "",
+      surname: "",
+      secondSurname: "",
+      email: ""
+    },
+    creditCard: {
+      cardNumber: "",
+      month: "",
+      year: ""
+    },
+    address: {
+      zipCode: "",
+      state: "",
+      municipio: "",
+      street: ""
+    }
+  }
+
+}]);
+
 myApp.controller('myController', ['$scope', function($scope) {
 
   $scope.formControl = {
