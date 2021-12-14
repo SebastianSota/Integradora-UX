@@ -62,3 +62,84 @@ myApp.controller('myController', ['$scope', function($scope) {
   }
 
 }]);
+
+myApp.controller('productdetailController', ['$scope', function($scope) {
+
+  $scope.cantidad = 1;
+  $scope.false = false;
+  $scope.notifi = false;
+  
+  $scope.sumar = () =>{
+    $scope.cantidad++;
+    $scope.bandera = false;
+  }
+
+  $scope.restar = () =>{
+    if($scope.cantidad ===1){
+      $scope.bandera = true;
+    }else{
+      $scope.cantidad--;
+      $scope.bandera = false;
+    }
+    
+  }
+
+  $scope.noti = () =>{
+    $scope.notifi = true;
+  }
+
+}]);
+
+myApp.controller('shoppingController', ['$scope', function($scope) {
+
+  $scope.cantidad = 1;
+  $scope.cantidad2 = 1;
+  $scope.false = false;
+  $scope.notifi = false;
+  $scope.fav2 = false;
+  $scope.fav = false;
+  
+  $scope.sumar = () =>{
+    $scope.cantidad++;
+    $scope.bandera = false;
+  }
+
+  $scope.restar = () =>{
+    if($scope.cantidad ===1){
+      $scope.bandera = true;
+    }else{
+      $scope.cantidad--;
+      $scope.bandera = false;
+    }
+    
+  }
+
+  $scope.sumar2 = () =>{
+    $scope.cantidad2++;
+    $scope.bandera = false;
+  }
+
+  $scope.restar2 = () =>{
+    if($scope.cantidad2 ===1){
+      $scope.bandera2 = true;
+    }else{
+      $scope.cantidad2--;
+      $scope.bandera2 = false;
+    }
+    
+  }
+
+  $scope.noti = () =>{
+    $scope.notifi = true;
+  }
+
+
+  $scope.favchng = () =>{
+    $scope.fav = !$scope.fav;
+  }
+
+  $scope.favchng2 = () =>{
+    $scope.fav2 = !$scope.fav2;
+  }
+
+}]);
