@@ -48,6 +48,25 @@
             background-color: #683804;
             width: 81%;
         }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: #E07500;
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn-close:focus {
+            outline: none;
+            box-shadow: none;
+        }
     </style>
 </head>
 
@@ -55,33 +74,203 @@
 
     <!-- Barra de menú -->
 
-    <nav class="navbar nav-forest">
+    <nav class="navbar nav-forest sticky-top">
         <div class="container-fluid row px-0 mx-0">
             <div class="col-3 d-flex justify-content-start">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="landingpage.html">
                     <img class="img-nav" src="../images/logo_wb.svg" alt="The forest">
                     <!-- The Forest -->
                 </a>
             </div>
             <div class="col-9 d-flex justify-content-end">
                 <div>
-                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                    <button type="button" class="btn text-white fw-bold img-nav mx-2" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <i data-feather="bell"></i>
                     </button>
                 </div>
                 <div>
-                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
-                        <i data-feather="shopping-cart"></i>
-                    </button>
+                    <a href="shoppingcart.html">
+                        <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                            <i data-feather="shopping-cart"></i>
+                        </button>
+                    </a>
                 </div>
                 <div>
-                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+                        type="button" class="btn text-white fw-bold img-nav mx-2">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
+
             </div>
         </div>
+
     </nav>
+    <!-- Menu -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div style="padding-top: 0px; padding-bottom: 0px;" class="offcanvas-header ">
+            <div class=" row col-12 d-flex ">
+                <nav style="padding-top: 0px; padding-bottom: 0px;" class="navbar ">
+                    <div class="container-fluid row px-0 mx-0">
+                        <div class="col-3 d-flex ">
+                            <a class="navbar-brand" href="./landingpage.html">
+                                <img class="img-nav" src="../images/logo_sin_letras.png" alt="The forest">
+                                <!-- The Forest -->
+                            </a>
+                        </div>
+                        <div class="col-9 d-flex justify-content-end">
+                            <div>
+                                <button type="button" class="btn fw-bold img-nav mx-2" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                    <i data-feather="bell"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <a href="shoppingcart.html">
+                                    <button type="button" class="btn fw-bold img-nav mx-2">
+                                        <i data-feather="shopping-cart"></i>
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+        </div>
+        <div style="padding-top: 0px !important;" class="offcanvas-body">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-lg-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <h5>Inicio</h5>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <hr style="padding:0px; margin:0px; width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <b style="display: block;" class="mt-2">Conocenos</b>
+                        <a href="landingpage.html#mision">
+                            <div>&nbsp; &nbsp;• Misión</div>
+                        </a>
+                        <a href="landingpage.html#vision">
+                            <div>&nbsp; &nbsp;• Visión</div>
+                        </a>
+                        <a href="landingpage.html#valores">
+                            <div>&nbsp; &nbsp;• Valores</div>
+                        </a>
+                        <a href="landingpage.html#contacto">
+                            <div>&nbsp; &nbsp;• Contáctanos</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-lg-3">
+                        <div class="text-center ">
+                            <h5>Platillos</h5>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <hr style="padding:0px; margin:0px; width:80%">
+                        </div>
+                        <b style="display: block;" class="mt-2">Entrada</b>
+                        <a href="productlist.html">
+                            <div>&nbsp; &nbsp;• Sopas</div>
+                        </a>
+                        <a href="productlist.html">
+                            <div>&nbsp; &nbsp;• Ensaldas</div>
+                        </a>
+                        <b style="display: block;">Plato fuerte</b>
+                        <a href="productlist.html">
+                            <div>&nbsp; &nbsp;• Guisados del dia</div>
+                        </a>
+                        <a href="productlist.html">
+                            <div>&nbsp; &nbsp;• Otra opción</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-lg-3">
+                        <div class="text-center ">
+                            <h5>Extras</h5>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <hr style="padding:0px; margin:0px; width:80%">
+                        </div>
+                        <b style="display: block;" class="mt-2">Postres</b>
+                        <a href="productlist.html">
+                            <div>&nbsp; &nbsp;• Pasteles</div>
+                        </a>
+                        <a href="">
+                            <div>&nbsp; &nbsp;• Helado</div>
+                        </a>
+                        <b style="display: block;">Bebidas</b>
+                        <a href="">
+                            <div>&nbsp; &nbsp;• Bebidas frias</div>
+                        </a>
+                        <a href="">
+                            <div>&nbsp; &nbsp;• Bebidas calientes</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-lg-3">
+                        <div class="text-center ">
+                            <h5>Configuración</h5>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <hr style="padding:0px; margin:0px; width:80%">
+                        </div>
+                        <b style="display: block;" class="mt-2">Cuenta</b>
+                        <a href="./userprofile.html" >
+                            <div>&nbsp; &nbsp;• Perfil</div>
+                        </a>
+                        <a  href="login.html">
+                            <div>&nbsp; &nbsp;• Iniciar sesion</div>
+                        </a>
+                        <a  href="register.html">
+                            <div>&nbsp; &nbsp;• Registrarse</div>
+                        </a>
+                        <a href="payment.html">
+                            <div>&nbsp; &nbsp;• Añadir metodo de pago</div>
+                        </a>
+                        <a href="pricing.html">
+                            <div>&nbsp; &nbsp;• Forest Pass</div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- notifications -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Notificaciones</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col-3 mb-3" style="display: block;">
+                    <img style="background-color: #E07500; padding: 5px; border-radius: 50%;" width="100%"
+                        src="../images/plato-de-servir.png">
+                </div>
+                <div class="col-9 mb-3">
+                    <b style="display: block; padding: 0px;">Confirmacion</b>
+                    Su platillo ya sido entregado
+                </div>
+                <div class="col-3" style="display: block;">
+                    <img style="background-color: #E07500; padding: 5px; border-radius: 50%;" width="100%"
+                        src="../images/rechazar.png">
+                </div>
+                <div class="col-9 ">
+                    <b style="display: block; padding: 0px;">Alerta</b>
+                    Su platillo ya sido rechazado
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- notificaitions end -->
 
     <!-- Fin barra menú -->
 
@@ -142,6 +331,7 @@
 
     <script src="../js/angular.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>

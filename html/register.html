@@ -11,11 +11,22 @@
   <link rel="shortcut icon" href="../images/logo_sin_letras.png" type="image/png" />
 </head>
 
+<style>
+  .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    .btn-close:focus {
+        outline: none;
+        box-shadow: none;
+    }
+</style>
+
 <body ng-app="theForest" ng-controller="registerController">
   <nav class="navbar navbar-light bg-orange">
     <div class="container-fluid row px-0 mx-0">
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-start">
-        <a class="navbar-brand fs-6" href="#">
+        <a class="navbar-brand fs-6" href="login.html">
           <img src="../images/back.png" style="width: 30px; height: 40px;">&nbsp;Iniciar sesión
         </a>
       </div>
@@ -29,7 +40,9 @@
         </div>
     </div> -->
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-end pe-4">
-        <img class="img-nav" src="../images/logo_sin_letras.png" alt="The forest">
+        <a href="landingpage.html" >
+          <img class="img-nav" src="../images/logo_sin_letras.png" alt="The forest">
+        </a>
         <!-- The Forest -->
       </div>
     </div>

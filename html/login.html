@@ -25,7 +25,7 @@
         </div>
         <div class="col-12 d-flex justify-content-center" >
             
-            <form name="login" novalidate class="col-9 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" >
+            <form name="login" ng-submit="start(login.$valid)" novalidate class="col-9 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" >
                 <div class="card text-dark bg-light mb-3 shadow-lg p-3 mb-5 bg-body rounded" >
                     <div class="card-header text-center"><h3>Iniciar sesión</h3></div>
                     <div class="card-body ">
@@ -40,6 +40,7 @@
                                 type="text" class="form-control" 
                                 aria-label="Amount (to the nearest dollar)"
                                 ng-required="true"
+                                autocomplete="false"
                             >
                         </div>
                         <span 
@@ -59,6 +60,7 @@
                                 class="form-control" 
                                 aria-label="Amount (to the nearest dollar)"
                                 ng-required="true"
+                                autocomplete="false"
                             >
                             <button  type="button"  class="input-group-text btn " style="border: 1px solid #C5CCD6" ng-click="hidePassword()" >
                                 <i ng-show="!formControl.crossEye" data-feather="eye"></i>
@@ -77,9 +79,8 @@
                         <div class="row d-flex justify-content-center mt-2" >
                             <button 
                                 style="width: 50%; border-radius: 25px " 
-                                type="button" 
+                                type="submit" 
                                 class="btn btn-warning"
-                                ng-click="start(login.$valid)"
                             >
                                 Iniciar sesión
                             </button>
