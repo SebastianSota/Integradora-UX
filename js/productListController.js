@@ -4,8 +4,8 @@ myApp.controller("productListController", ($scope) => {
   $scope.data = {
     products: [
       {
-        name: "Sopa de pollo",
-        img: "https://www.gourmet.cl/wp-content/uploads/2018/04/Foto-editada-1.jpg",
+        name: "Sopa de fideos",
+        img: "../images/sopa.png",
         starts: 3,
       },
       {

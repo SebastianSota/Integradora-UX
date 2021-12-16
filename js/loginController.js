@@ -51,7 +51,7 @@ myApp.controller('myController', ['$scope', function($scope) {
 
 
       if($scope.formControl.user.name === "luis" && $scope.formControl.user.password === "contrasena")
-        window.location.replace("error 404.html")
+        window.location.assign("./landingpage.html")
       else
         $scope.formControl.showWarning = true;
   }
