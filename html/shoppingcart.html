@@ -34,6 +34,81 @@
         a:hover {
             color: #E07500;
         }
+
+        .btn-outline-success{
+            border: 1px solid #ca5c13;
+            color: #ca5c13;
+        }
+
+        .btn-outline-success:hover{
+            border: 1px solid #ca5c13;
+            background-color: #ca5c13;
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn-cerrar {
+            color: #ca5c13;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-chat {
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: white;
+
+        }
+
+        .adiv {
+            background: #d6d6d6;
+            border-radius: 10px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            font-size: 15px;
+            height: 46px;
+            color: #ca5c13;
+            font-weight: 700;
+        }
+
+        .chat {
+            border: none;
+            background: #db6719;
+            font-size: 12px;
+            border-radius: 8px
+        }
+
+        .bg-white {
+            border: 1px solid #E7E7E9;
+            font-size: 12px;
+            border-radius: 8px;
+            margin-left: 20%;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            border: 1px solid #b4b4b4;
+            font-size: 14px;
+            width: 100%;
+            height: 36px;
+            margin-bottom: 10px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #db6719;
+        }
+
+        .form-control::placeholder {
+            color: #C4C4C4;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -48,12 +123,10 @@
             </div>
             <div class="col-9 d-flex justify-content-end">
                 <div>
-                    <a href="">
                         <button type="button" class="btn text-white fw-bold img-nav mx-2" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <i data-feather="bell"></i>
                         </button>
-                    </a>
                 </div>
                 <div>
                     <a href="shoppingcart.html">
@@ -190,7 +263,7 @@
                             <hr style="padding:0px; margin:0px; width:80%">
                         </div>
                         <b style="display: block;" class="mt-2">Cuenta</b>
-                        <a>
+                        <a href="userprofile.html">
                             <div>&nbsp; &nbsp;• Perfil</div>
                         </a>
                         <a  href="login.html">
@@ -347,6 +420,50 @@
         </div>
     </div>
 
+    <div class="fixed-bottom justify-content-end d-flex me-3 mb-3">
+        <a id="messageIcon" onclick="showChat()"><i class="btn btn-outline-success fa fa-comment-o"
+                style="border-radius: 50%; padding: 15px;"></i></a>
+    </div>
+    
+    
+    <div class="container-fluid  fixed-bottom">
+        <div id="cardChatId" class="row">
+            <div class="col-12 justify-content-end d-flex">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-3 ">
+                    <div class="card-chat  ">
+                        <div class="d-flex flex-row justify-content-between adiv"> <span class="p-3"> Forest Restaurant
+                            </span><button onclick="hideChat()" class="btn btn-cerrar"><i
+                                    class="fa fa-times"></i></button> </div>
+                        <div class="d-flex flex-row p-3"> <img
+                                src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
+                                width="30" height="30">
+                            <div class="chat ml-2 p-3">Hola, soy tu asistente personal, ¡Resolveré cualquiera de tus
+                                dudas!
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row p-3">
+                            <div class="bg-white mr-2 p-3"><span class="text-muted">¿Comó puedo iniciar sesión?</span>
+                            </div>
+                            <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png"
+                                width="30" height="30">
+                        </div>
+                        <div class="d-flex flex-row p-3"> <img
+                                src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
+                                width="30" height="30">
+                            <div class="chat ml-2 p-3">Para iniciar sesión debe dar click en el menú de arriba a la
+                                derecha
+                                y seleccionara iniciar sesión.</div>
+                        </div>
+                        <div class="form-group px-3"> <textarea style="resize: none;" class="form-control" rows="5"
+                                placeholder="Mensaje"></textarea> </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <script src="../js/example.js"></script>
     <script src="../js/angular.min.js"></script>
     <script src="../js/loginController.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
