@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing</title>
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/productListStyle.css">
     <link rel="shortcut icon" href="../images/logo_sin_letras.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .checked {
-          color: orange;
+            color: orange;
         }
-        .row{
+
+        .row {
             margin: 0px;
             padding: 0px;
         }
+
         .bg-orange {
             background-color: #E07500;
             color: white;
         }
-        .btn-forest{
+
+        .btn-forest {
             background-color: #E07500;
             color: white;
             width: 80%;
@@ -28,44 +33,63 @@
             font-size: 18px;
             outline: none;
         }
-        .btn-forest:hover{
+
+        .btn-forest:hover {
             color: #683804;
         }
-        .btn-forest:focus{
+
+        .btn-forest:focus {
             outline: none;
             box-shadow: none;
         }
-        .btn-forest:active{
+
+        .btn-forest:active {
             color: white;
             background-color: #683804;
             width: 81%;
         }
-        </style>
+    </style>
 </head>
+
 <body>
 
     <!-- Barra de menú -->
-    
-    <div class="col-12">
-        <nav class="navbar navbar-expand-lg navbar-light bg-orange">
-            <div class="container-fluid">
-              <img src="../images/logo_sin_letras.png" style="width: 40px;" class="navbar-brand">
-              <div class="text-end">
-                <img src="../images/bell.png" style="width: 30px;" class="navbar-brand">
-                <img src="../images/shopping-cart.png" style="width: 30px;" class="navbar-brand">
-                <img src="../images/menus.png" style="width: 30px;" class="navbar-brand">
-              </div>
+
+    <nav class="navbar nav-forest">
+        <div class="container-fluid row px-0 mx-0">
+            <div class="col-3 d-flex justify-content-start">
+                <a class="navbar-brand" href="#">
+                    <img class="img-nav" src="../images/logo_wb.svg" alt="The forest">
+                    <!-- The Forest -->
+                </a>
             </div>
-        </nav>
-    </div>
+            <div class="col-9 d-flex justify-content-end">
+                <div>
+                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                        <i data-feather="bell"></i>
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                        <i data-feather="shopping-cart"></i>
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="btn text-white fw-bold img-nav mx-2">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Fin barra menú -->
 
     <div class="row">
         <div class="col-lg-12 col-sm-12 col-xl-12 text-center" style="margin-top: 20px;">
-            <h1>Suscripciones</h1>
+            <h2>Suscripciones</h2>
         </div>
-        
+
         <hr style="border-bottom: 1px solid #000; background-color: #000; margin-top: 10px; margin-bottom: 20px; ">
         <div class="row">
             <div class="col-lg-2 col-sm-2 col-xl-2 text-center">
@@ -81,7 +105,9 @@
                 <div class="card h-100" style="filter: drop-shadow(4px 4px 2px rgba(66, 66, 66, 0.5));">
                     <div class="card-body">
                         <h3 class="card-title" style="margin-bottom: 25px;">Gratuito</h3>
-                        <h6 class="card-text" style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
+                        <h6 class="card-text"
+                            style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">
+                            Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
                         <h1 style="margin-bottom: 40px;font-style: italic; font-weight: 400;">$0.00 MXN</h1>
                         <a href="#" class="btn btn-forest">Contratar</a>
                     </div>
@@ -91,7 +117,9 @@
                 <div class="card h-100" style="filter: drop-shadow(4px 4px 2px rgba(66, 66, 66, 0.5));">
                     <div class="card-body">
                         <h3 class="card-title" style="margin-bottom: 25px;">Cliente Frecuente</h3>
-                        <h6 class="card-text" style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
+                        <h6 class="card-text"
+                            style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">
+                            Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
                         <h1 style="margin-bottom: 40px;font-style: italic; font-weight: 400;">$100.00 MXN</h1>
                         <a href="#" class="btn btn-forest">Contratar</a>
                     </div>
@@ -101,7 +129,9 @@
                 <div class="card h-100" style="filter: drop-shadow(4px 4px 2px rgba(66, 66, 66, 0.5));">
                     <div class="card-body">
                         <h3 class="card-title" style="margin-bottom: 25px;">Cliente Premium</h3>
-                        <h6 class="card-text" style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
+                        <h6 class="card-text"
+                            style="padding-left: 15%; padding-right: 15%; text-align: justify; margin-bottom: 20px;">
+                            Permite el acceso a las funciones básicas de la app además de las no básicas.</h6>
                         <h1 style="margin-bottom: 40px;font-style: italic;font-weight: 400;">$200.00 MXN</h1>
                         <a href="#" class="btn btn-forest">Contratar</a>
                     </div>
@@ -110,5 +140,14 @@
         </div>
     </div>
 
+    <script src="../js/angular.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+
 </body>
+
 </html>
