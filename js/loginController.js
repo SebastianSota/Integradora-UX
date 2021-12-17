@@ -85,7 +85,7 @@ myApp.controller('productdetailController', ['$scope', function($scope) {
   }
 
   $scope.noti = () =>{
-    $scope.notifi = true;
+    $scope.notifi = !$scope.notifi;
   }
 
 }]);

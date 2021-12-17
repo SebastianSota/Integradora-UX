@@ -169,7 +169,8 @@
                 <div>
                     <a href="shoppingcart.html">
                         <button type="button" class="btn text-white fw-bold img-nav mx-2">
-                            <i data-feather="shopping-cart"></i>
+                            <i ng-show="!notifi" data-feather="shopping-cart"></i>
+                            <i ng-show="notifi" style="color: black;" data-feather="shopping-cart"></i>
                         </button>
                     </a>
                 </div>
