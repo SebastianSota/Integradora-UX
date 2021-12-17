@@ -324,7 +324,7 @@
       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center"
         ng-repeat="(key, item) in data.products">
         <div class="card my-3 border-0" style="width: 16rem;">
-          <img src="{{item.img}}" class="card-img-top img-thumbnail border-5" alt="https://www.gourmet.cl">
+          <img ng-click="productDetail()" src="{{item.img}}" class="card-img-top img-thumbnail border-5" alt="https://www.gourmet.cl">
           <div class="card-body">
             <h5 class="card-title h4 text-center">{{ item.name }}</h5>
             <div class="card-text">

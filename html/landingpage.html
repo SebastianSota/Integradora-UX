@@ -69,14 +69,14 @@
             box-shadow: none;
         }
 
-        
-        
-        .btn-outline-success{
+
+
+        .btn-outline-success {
             border: 1px solid #ca5c13;
             color: #ca5c13;
         }
 
-        .btn-outline-success:hover{
+        .btn-outline-success:hover {
             border: 1px solid #ca5c13;
             background-color: #ca5c13;
         }
@@ -145,7 +145,6 @@
             color: #C4C4C4;
             font-size: 14px;
         }
-
     </style>
 </head>
 
@@ -219,7 +218,8 @@
                     </div>
                 </nav>
             </div>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="padding-right: 10px;" >
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="padding-right: 10px;">
             </button>
         </div>
         <div style="padding-top: 0px !important;" class="offcanvas-body">
@@ -302,13 +302,13 @@
                             <hr style="padding:0px; margin:0px; width:80%">
                         </div>
                         <b style="display: block;" class="mt-2">Cuenta</b>
-                        <a href="./userprofile.html" >
+                        <a href="./userprofile.html">
                             <div>&nbsp; &nbsp;• Perfil</div>
                         </a>
-                        <a  href="login.html">
+                        <a href="login.html">
                             <div>&nbsp; &nbsp;• Iniciar sesion</div>
                         </a>
-                        <a  href="register.html">
+                        <a href="register.html">
                             <div>&nbsp; &nbsp;• Registrarse</div>
                         </a>
                         <a href="payment.html">
@@ -357,11 +357,10 @@
         <div class="container mt-3">
             <div class="h2 text-center">Menú del día</div>
             <hr style="border-bottom: 1px solid #000; background-color: #000; margin-top: 10px; margin-bottom: 20px; ">
-
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center"
                     ng-repeat="product in data.products">
-                    <div class="card my-3 border-0" style="width: 16rem;">
+                    <div ng-click="productDetail()" class="card my-3 border-0" style="width: 16rem;">
                         <img src="{{product.img}}" class="card-img-top img-thumbnail" alt="{{product.desc}}"
                             style="filter: drop-shadow(4px 4px 2px rgba(66, 66, 66, 0.5));">
                         <div class="card-body">

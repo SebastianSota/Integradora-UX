@@ -1,6 +1,11 @@
 var myApp = angular.module("theForest", []);
 
 myApp.controller("productListController", ($scope) => {
+
+  $scope.productDetail = () => {
+    window.location.assign("./productDetail.html");
+  }
+
   $scope.data = {
     products: [
       {
