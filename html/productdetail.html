@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
 
     <link rel="shortcut icon" href="../images/logo_sin_letras.png" type="image/png" />
@@ -68,12 +70,12 @@
             color: #E07500;
         }
 
-        .btn-outline-success{
+        .btn-outline-success {
             border: 1px solid #ca5c13;
             color: #ca5c13;
         }
 
-        .btn-outline-success:hover{
+        .btn-outline-success:hover {
             border: 1px solid #ca5c13;
             background-color: #ca5c13;
         }
@@ -299,13 +301,13 @@
                             <hr style="padding:0px; margin:0px; width:80%">
                         </div>
                         <b style="display: block;" class="mt-2">Cuenta</b>
-                        <a href="./userprofile.html" >
+                        <a href="./userprofile.html">
                             <div>&nbsp; &nbsp;• Perfil</div>
                         </a>
-                        <a  href="login.html">
+                        <a href="login.html">
                             <div>&nbsp; &nbsp;• Iniciar sesion</div>
                         </a>
-                        <a  href="register.html">
+                        <a href="register.html">
                             <div>&nbsp; &nbsp;• Registrarse</div>
                         </a>
                         <a href="payment.html">
@@ -360,8 +362,8 @@
     <hr style="border: 1px solid; border-color: #000; width: 100%;">
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <img style="width: 100%; height: 70%;" class="shadow  bg-body rounded" src="../images/sopa.png" />
+            <div class="col-6 text-center">
+                <img style="width: 80%; height: 60%;" class="shadow  bg-body rounded" src="../images/sopa.png" />
             </div>
             <div class="col-6">
                 <div class="ms-3">
@@ -372,16 +374,16 @@
                             carrito
                         </button>
                     </p>
-                    <p class="mt-5 h5">
+                    <p class="mt-4 h5">Cantidad</p>
+                    <p class="mt-2 h5">
                         <button class="btn" ng-click="restar()">
-                            <img src="../images/minus-line.png" alt="Más" style="width: 30px; height: 30px;">
+                            <img src="../images/minus-line.png" alt="Más" style="width: 20px; height: 20px;">
                         </button>
                         <input type="number" ng-disabled="true" ng-model="cantidad" style="width: 60px;"></label>
                         <button class="btn" ng-click="sumar()">
-                            <img src="../images/plus.png" alt="Más" style="width: 30px; height: 30px;">
+                            <img src="../images/plus.png" alt="Más" style="width: 20px; height: 20px;">
                         </button>
                     </p>
-                    <p class="ms-2 h5">Cantidad</p>
                     <span style="color:red" ng-show="bandera" class="ng-hide">No se puede reducir la cantidad a menos de
                         1
                     </span>
@@ -404,6 +406,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="fixed-bottom justify-content-end d-flex me-3 mb-3">
         <a id="messageIcon" onclick="showChat()"><i class="btn btn-outline-success fa fa-comment-o"
