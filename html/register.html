@@ -62,70 +62,91 @@
           Datos de envío
         </div>
       </div>
-      <div class="row">
+      <div class="row" ng-form="userInfoForm">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.user.name" placeholder="Nombre" type="text" class="form-control"
+            <input name="name" ng-model="data.user.name" placeholder="Nombre" type="text" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="user"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="userInfoForm.name.$error.required && userInfoForm.name.$touched">
+            Este campo es requerido
+          </span>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
+        <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.user.lastname" placeholder="Apellidos" type="text" class="form-control"
-              aria-label="Amount (to the nearest dollar)" ng-required="true">
-            <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
-              <i data-feather="user"></i>
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
-          <div class="input-group ">
-            <input name="" ng-model="data.user.phone" placeholder="Teléfono" type="text" class="form-control"
-              aria-label="Amount (to the nearest dollar)" ng-required="true">
-            <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
-              <i data-feather="phone"></i>
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
-          <div class="input-group ">
-            <input name="" ng-model="data.user.username" placeholder="Nombre de usuario" type="text"
+            <input name="lastname" ng-model="data.user.lastname" placeholder="Apellidos" type="text"
               class="form-control" aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="user"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="userInfoForm.lastname.$error.required && userInfoForm.lastname.$touched">
+            Este campo es requerido
+          </span>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
+          <div class="input-group ">
+            <input name="phone" ng-model="data.user.phone" placeholder="Teléfono" type="number" class="form-control"
+              aria-label="Amount (to the nearest dollar)" ng-required="true">
+            <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
+              <i data-feather="phone"></i>
+            </span>
+          </div>
+          <span class="text-danger" ng-show="userInfoForm.phone.$error.required && userInfoForm.phone.$touched">
+            Este campo es requerido
+          </span>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
+          <div class="input-group ">
+            <input name="username" ng-model="data.user.username" placeholder="Nombre de usuario" type="text"
+              class="form-control" aria-label="Amount (to the nearest dollar)" ng-required="true">
+            <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
+              <i data-feather="user"></i>
+            </span>
+          </div>
+          <span class="text-danger" ng-show="userInfoForm.username.$error.required && userInfoForm.username.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group">
-            <select class="form-select text-muted" ng-model="data.user.gender" name="" id="">
+            <select class="form-select text-muted" ng-model="data.user.gender" name="gender" id="" ng-required="true">
               <option value="">Genero</option>
               <option value="hombre">Hombre</option>
               <option value="mujer">Mujer</option>
             </select>
           </div>
+          <span class="text-danger" ng-show="userInfoForm.gender.$error.required && userInfoForm.gender.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.user.password" placeholder="Contraseña" type="{{passwordTypeInput()}}"
+            <input name="password" ng-model="data.user.password" placeholder="Contraseña" type="{{passwordTypeInput()}}"
               class="form-control" aria-label="Amount (to the nearest dollar)" ng-required="true">
             <button type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="eye-off" ng-if="data.inputPassword === true" ng-click="changeTypePassword()"></i>
               <i data-feather="eye" ng-if="data.inputPassword === false" ng-click="changeTypePassword()"></i>
             </button>
           </div>
+          <span class="text-danger" ng-show="userInfoForm.password.$error.required && userInfoForm.password.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.user.email" placeholder="Correo electrónico" type="text" class="form-control"
-              aria-label="Amount (to the nearest dollar)" ng-required="true">
+            <input name="email" ng-model="data.user.email" placeholder="Correo electrónico" type="text"
+              class="form-control" aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="mail"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="userInfoForm.email.$error.required && userInfoForm.email.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-12 d-flex justify-content-end">
           <button ng-click="changeView()" class="btn btn-primary">
@@ -151,52 +172,67 @@
           Datos de envío
         </div>
       </div>
-      <div class="row">
+      <div class="row" ng-form="addressForm">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.address.zip" placeholder="Código postal" type="text" class="form-control"
+            <input name="zip" ng-model="data.address.zip" placeholder="Código postal" type="number" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i>#</i>
             </span>
           </div>
+          <span class="text-danger" ng-show="addressForm.zip.$error.required && addressForm.zip.$touched">
+            Este campo es requerido
+          </span>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.address.state" placeholder="Estado" type="text" class="form-control"
+            <input name="state" ng-model="data.address.state" placeholder="Estado" type="text" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="map"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="addressForm.state.$error.required && addressForm.state.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.address.city" placeholder="Ciudad" type="text" class="form-control"
+            <input name="city" ng-model="data.address.city" placeholder="Ciudad" type="text" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="map"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="addressForm.city.$error.required && addressForm.city.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4">
           <div class="input-group ">
-            <input name="" ng-model="data.address.colony" placeholder="Colonia" type="text" class="form-control"
+            <input name="colony" ng-model="data.address.colony" placeholder="Colonia" type="text" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="map"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="addressForm.colony.$error.required && addressForm.colony.$touched">
+            Este campo es requerido
+          </span>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 my-4 ">
           <div class="input-group ">
-            <input name="" ng-model="data.address.street" placeholder="Calle" type="text" class="form-control"
+            <input name="street" ng-model="data.address.street" placeholder="Calle" type="text" class="form-control"
               aria-label="Amount (to the nearest dollar)" ng-required="true">
             <span type="button" class="input-group-text btn " style="border: 1px solid #C5CCD6">
               <i data-feather="map"></i>
             </span>
           </div>
+          <span class="text-danger" ng-show="addressForm.street.$error.required && addressForm.street.$touched">
+            Este campo es requerido
+          </span>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-4 ">
